@@ -6,4 +6,9 @@
 	@include themed() {
 		background-color: t($bg);
 	}
+
+	&__indentation {
+		width: rem-calc(1440px);
+		margin: 0 auto;
+	}
 }

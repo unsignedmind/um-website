@@ -4,7 +4,7 @@ import { PageHeadlineView } from '../../widgets/page-headline/page-headline-view
 
 export const WorkPageView = () => {
 	return (
-		<div>
+		<div className='work-page__wrapper'>
 			<PageHeadlineView />
 			test
 		</div>

@@ -3,6 +3,10 @@ import './page-headline-styles.scss'
 
 export const PageHeadlineView = () => {
 	return (
-		<div>-- WORK --</div>
+		<div className='page-headline'>
+			<span className='page-headline__divider' />
+			<div className='page-headline__text'>WORK</div>
+			<span className='page-headline__divider' />
+		</div>
 	);
 };
