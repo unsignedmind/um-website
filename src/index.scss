@@ -1,5 +1,8 @@
 @import "styles/base/normalization/normalize";
 @import "styles/base/normalization/sanitize";
+@import "styles/base/components/links";
+@import "styles/base/meta/typography";
+@import "../styles/meta/theme";
 
 body {
 	margin: 0;

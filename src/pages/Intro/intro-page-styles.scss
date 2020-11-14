@@ -8,6 +8,43 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: $contrast-0;
+    overflow: hidden;
+
+    @include themed() {
+      background-color: t($bg);
+    }
+  }
+
+  &__bg-image {
+    position: absolute;
+
+    /* Full height */
+    height: 100%;
+    width: 100%;
+
+    /* Center and scale the image nicely */
+    object-fit: cover;
+    background-size: cover;
+    opacity: 0;
+
+    @include themed() {
+      animation: t($intro-animation) 1s ease-in-out 4s forwards;
+    }
+  }
+}
+
+/* Animations */
+
+@keyframes bg-fade-light {
+  from { opacity: 0; }
+  to   {
+    opacity: 0.2;
+  }
+}
+
+@keyframes bg-fade-dark {
+  from { opacity: 0; }
+  to   {
+    opacity: 0.6;
   }
 }

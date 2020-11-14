@@ -1,0 +1,60 @@
+@import '../../../styles/meta/_index';
+
+.headline-stroke {
+  &__text-positioning {
+    position: relative;
+  }
+
+  &__text {
+    font-family: Bangers, serif;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: rem-calc(-1px);
+
+    &--hidden {
+      opacity: 0;
+    }
+
+    &--sizing-intro {
+      font-size: rem-calc(128px);
+      transform: rotate(-10deg);
+    }
+
+    &--primary-intro {
+      position: absolute;
+      top: rem-calc(5px);
+      left: rem-calc(8px);
+      color: #FF9900;
+      -webkit-text-stroke: rem-calc(5px) #1F2D3B;
+    }
+
+    &--accent-intro {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #3C5874;
+      -webkit-text-stroke: rem-calc(5px) #FF9900;
+    }
+
+    &--sizing-header {
+      font-size: rem-calc(50px);
+    }
+
+    &--primary-header {
+      position: absolute;
+      top: rem-calc(3px);
+      left: rem-calc(3px);
+      font-size: rem-calc(50px);
+      color: #FF9900;
+      -webkit-text-stroke: rem-calc(2px) #1F2D3B;
+    }
+
+    &--accent-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #3C5874;
+      -webkit-text-stroke: rem-calc(2px) #FF9900;
+    }
+  }
+}

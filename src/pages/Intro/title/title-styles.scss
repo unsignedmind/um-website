@@ -6,24 +6,29 @@
     justify-content: center;
     position: relative;
     width: rem-calc($intro-width-desktop);
+    margin-top: 50vh;
+    animation: title-shift 1s ease-in-out 4s forwards;
   }
 
   &__title {
     display: inline-block;
     justify-content: center;
-    padding: 0 rem-calc(50px);
+    padding: rem-calc(30px 0 50px 0);
+    animation: fadein 1s ease-in-out forwards;
   }
 
   &__motto {
     position: absolute;
     right: rem-calc(16px);
     bottom: rem-calc(13px);
-    font-family: Montserrat, serif;
-    font-size: 28px;
-    color: #fff;
+    font-size: rem-calc(28px);
     opacity: 0;
-    animation: motto-blink 0.2s linear 2.3s;
+    animation: motto-blink 0.2s linear 3.3s;
     animation-fill-mode: forwards;
+
+    @include themed() {
+      color: t($text);
+    }
   }
 
   &__accent-line {
@@ -35,59 +40,23 @@
     &--top-left-white {
       top: 0;
       left: 0;
-      border-top: rem-calc(1px) solid #fff;
-      border-left: rem-calc(1px) solid #fff;
+      animation: line-fade-top-left 2s ease-in-out 1s forwards;
+
+      @include themed() {
+        border-top: rem-calc(1px) solid t($border);
+        border-left: rem-calc(1px) solid t($border);
+      }
     }
 
     &--bottom-right-white {
       right: 0;
       bottom: 0;
-      border-right: rem-calc(1px) solid #fff;
-      border-bottom: rem-calc(1px) solid #fff;
-    }
+      animation: line-fade-bottom-right 2s ease-in-out 1s forwards;
 
-    &--animation {
-      animation: line-fade 1s ease-in-out 1s;
-      animation-fill-mode: forwards;
-    }
-  }
-
-  &__logo-wrapper {
-    position: relative;
-    animation: fadein 1s ease-in-out;
-    padding: rem-calc(30px 0 50px 0);
-  }
-
-  &__logo-positioning {
-    position: relative;
-  }
-
-  &__logo {
-    font-family: Bangers, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: rem-calc(128px);
-    letter-spacing: rem-calc(-1px);
-    transform: rotate(-10deg);
-
-    &--primary {
-      position: absolute;
-      top: rem-calc(5px);
-      left: rem-calc(8px);
-      color: #FF9900;
-      -webkit-text-stroke: 5px #1F2D3B;
-    }
-
-    &--accent {
-      position: absolute;
-      top: 0;
-      left: 0;
-      color: #3C5874;
-      -webkit-text-stroke: 5px #FF9900;
-    }
-
-    &--hidden {
-      opacity: 0;
+      @include themed() {
+        border-right: rem-calc(1px) solid t($border);
+        border-bottom: rem-calc(1px) solid t($border);
+      }
     }
   }
 }
@@ -98,9 +67,16 @@
   to   { opacity: 1; padding-top: rem-calc(30px); }
 }
 
-@keyframes line-fade {
-  from   { width: 0; height: 0; opacity: 1; }
-  to { width: 30%; height: 100%; opacity: 1; }
+@keyframes line-fade-top-left {
+  0%  { width: 0.25%; height: 0.75%; top: 100%; opacity: 1; }
+  50% { width: 0.25%; height: 0.75%; top: 0; opacity: 1;}
+  100% { width: 30%; height: 100%; opacity: 1; }
+}
+
+@keyframes line-fade-bottom-right {
+  0%  { width: 0.25%; height: 0.75%; bottom: 100%; opacity: 1; }
+  50% { width: 0.25%; height: 0.75%; bottom: 0; opacity: 1; }
+  100% { width: 30%; height: 100%; opacity: 1; }
 }
 
 @keyframes motto-blink {
@@ -109,4 +85,9 @@
   60% { opacity: 0; }
   99% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes title-shift {
+  from { margin-top: 50vh }
+  to { margin-top: 0 }
 }

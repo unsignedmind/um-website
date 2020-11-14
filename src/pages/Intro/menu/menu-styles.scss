@@ -6,16 +6,21 @@
     justify-content: center;
     width: rem-calc($intro-width-desktop);
     margin-top: rem-calc(60px);
-    color: #fff;
-    border-left: rem-calc(1px) solid #fff;
-    border-right: rem-calc(1px) solid #fff;
     opacity: 0;
-    animation: menu-fade 1s ease-in-out 2.7s forwards;
+    animation: menu-accent-fade 0.2s ease-in-out 4.8s forwards;
+
+    @include themed() {
+      color: t($text);
+      border-left: rem-calc(1px) solid t($border);
+      border-right: rem-calc(1px) solid t($border)
+    }
   }
 
   &__list {
     list-style: none;
     padding: 0;
+    opacity: 0;
+    animation: menu-fade 1s ease-in-out 5.4s forwards;
   }
 
   &__item {
@@ -44,6 +49,10 @@
     margin-right: rem-calc(45px);
     padding-top: rem-calc(5px);
     transition: 0.3s;
+
+    @include themed() {
+      color: t($text);
+    }
   }
 
   &__item-icon {
@@ -57,8 +66,16 @@
 }
 
 @keyframes menu-fade {
-  from { opacity: 0}
-  to { opacity: 1 }
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes menu-accent-fade {
+  0%  { opacity: 1; }
+  59% { opacity: 1; }
+  60% { opacity: 0; }
+  99% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @keyframes menu-arrow-fade {

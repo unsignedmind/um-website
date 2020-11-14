@@ -1,0 +1,77 @@
+@import '../../../styles/meta/_index';
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: rem-calc(90px);
+
+  @include themed() {
+    color: t($text);
+    background-color: t($header-bg);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    width: rem-calc(1440px);
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__brand {
+    margin-right: rem-calc(35px);
+    padding-right: rem-calc(45px);
+    border-right: 1px solid #fff;
+
+    @include themed() {
+      border-right: 1px solid t($header-border);
+    }
+  }
+
+  &__nav-item {
+    margin-right: rem-calc(25px);
+    font-weight: bold;
+    font-size: rem-calc(24px);
+
+    @include themed() {
+      color: t($header-text);
+    }
+
+    &:hover {
+      border-bottom: rem-calc(3px) solid $primary;
+    }
+  }
+
+  &__dark-mode-switch {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-self: flex-end;
+  }
+
+  &__dark-mode-switch-label {
+    margin-right: rem-calc(10px);
+
+    @include themed() {
+      color: t($header-text);
+    }
+  }
+
+  &__dark-mode-switch-button {
+    display: block;
+    width: rem-calc(32px);
+    height: rem-calc(32px);
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include themed() {
+      background-color: t($darkMode-switch-bg);
+      box-shadow: rem-calc(0px 0px 4px 3px) t($darkMode-switch-bg);
+    }
+  }
+}

@@ -1,19 +1,23 @@
 @import '../../../../styles/meta/_index';
 
 .intro-copyright {
+  display: block;
   width: rem-calc($intro-width-desktop);
   margin-top: rem-calc(60px);
   padding-bottom: rem-calc(10px);
   font-family: Bangers, serif;
   font-size: rem-calc(30px);
   text-align: center;
-  color: #fff;
-  border-bottom: rem-calc(1px) solid #fff;
   opacity: 0;
-  animation: menu-fade 0.5s ease-in-out 3.7s forwards;
+  animation: menu-fade 0.5s ease-in-out 6s forwards;
+
+  @include themed() {
+    color: t($text);
+    border-bottom: rem-calc(1px) solid t($border);
+  }
 }
 
 @keyframes copyright-fade {
-  from { opacity: 0}
-  to { opacity: 1 }
+  from { opacity: 0;}
+  to { opacity: 1 ; }
 }

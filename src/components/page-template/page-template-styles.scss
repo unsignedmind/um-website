@@ -1,0 +1,9 @@
+@import '../../../styles/meta/_index';
+
+.page {
+	height: 100vh;
+
+	@include themed() {
+		background-color: t($bg);
+	}
+}

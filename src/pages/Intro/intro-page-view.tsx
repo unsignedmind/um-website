@@ -4,12 +4,15 @@ import { TitleView } from './title/title-view';
 import { MenuView } from './menu/menu-view';
 import { IntroCopyrightView } from './intro-copyright/intro-copyright-view';
 
-export const IntroPage = () => {
+export const IntroPageView = () => {
   return (
-    <div className='intro-page__wrapper'>
-      <TitleView />
-      <MenuView />
-      <IntroCopyrightView />
-    </div>
+    <>
+      <img src="images/bg.png" alt="background" className='intro-page__bg-image' />
+      <div className='intro-page__wrapper'>
+        <TitleView />
+        <MenuView />
+        <IntroCopyrightView />
+      </div>
+    </>
   );
 };

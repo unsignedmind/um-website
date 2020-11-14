@@ -1,0 +1,135 @@
+// ** Palette **
+
+// Blue
+$blue-10: #eef3ff;
+$blue-20: #d4e0ff;
+$blue-30: #bbcdff;
+$blue-40: #a1bbff;
+$blue-50: #88a8ff;
+$blue-60: #6e96ff;
+$blue-70: #5583ff;
+$blue-80: #3b71ff;
+$blue-90: #225EFF;
+$blue-100: #084bff;
+$blue-110: #0040ed;
+$blue-120: #0039d4;
+$blue-130: #0033ba;
+$blue-140: #002ca1;
+$blue-150: #002587;
+$blue-160: #001e6e;
+$blue-170: #001754;
+$blue-180: #00103b;
+$blue-190: #000921;
+
+// Red
+$red-10: #fce9e9;
+$red-20: #f8d3d3;
+$red-30: #f5bdbd;
+$red-40: #f1a7a7;
+$red-50: #ee9191;
+$red-60: #eb7a7a;
+$red-70: #e76464;
+$red-80: #e44e4e;
+$red-90: #e03838;
+$red-100: #dd2222;
+$red-110: #c71f1f;
+$red-120: #b11b1b;
+$red-130: #9b1818;
+$red-140: #851414;
+$red-150: #6e1111;
+$red-160: #580e0e;
+$red-170: #420a0a;
+$red-180: #2c0707;
+$red-190: #160303;
+
+// Contrast
+$contrast-0: #000;
+$contrast-10: #0d0d0d;
+$contrast-20: #1a1a1a;
+$contrast-30: #262626;
+$contrast-40: #333333;
+$contrast-50: #404040;
+$contrast-60: #4d4d4d;
+$contrast-70: #595959;
+$contrast-80: #666666;
+$contrast-90: #737373;
+$contrast-100: #808080;
+$contrast-120: #8c8c8c;
+$contrast-130: #999999;
+$contrast-140: #a6a6a6;
+$contrast-150: #b3b3b3;
+$contrast-160: #bfbfbf;
+$contrast-170: #cccccc;
+$contrast-180: #d9d9d9;
+$contrast-190: #e6e6e6;
+$contrast-200: #f2f2f2;
+$contrast-210: #fff;
+
+
+// Main Colors
+$yellow: #f8e825;
+$orange: #FF9900;
+$orange-light: #FFEED9;
+$red: #dd2222;
+$blue-dark: #1F2D3B;
+$blue-light: #92ACC6;
+
+// Color string mapping
+$bg: 'bg';
+$header-bg: 'header-bg';
+$text: 'text';
+$header-text: 'header-text';
+$border: 'border';
+$header-border: 'header-border';
+$intro-animation: 'intro-animation';
+$darkMode-switch-bg: 'darkMode-switch-bg';
+
+// Color Assignments
+$primary: $orange;
+$accent: $blue-dark;
+
+$bg-light: $contrast-210;
+$bg-dark: $contrast-0;
+$text-light: $contrast-0;
+$text-dark: $contrast-210;
+$border-light: $contrast-0;
+$border-dark: $contrast-210;
+
+$header-text-light: $contrast-210;
+$header-text-dark: $contrast-0;
+$header-border-light: $contrast-210;
+$header-border-dark: $contrast-0;
+$header-bg-light: $contrast-0;
+$header-bg-dark: $contrast-210;
+
+$darkMode-switch-bg-light: $contrast-210;
+$darkMode-switch-bg-dark: $contrast-0;
+
+$intro-animation-dark: bg-fade-dark;
+$intro-animation-light: bg-fade-light;
+
+
+/* THEME */
+
+$themes: (
+  default: (
+    bg: $bg-light,
+    header-bg: $header-bg-light,
+    text: $text-light,
+    header-text: $header-text-light,
+    border: $border-light,
+    header-border: $header-border-light,
+    intro-animation: $intro-animation-light,
+    darkMode-switch-bg: $darkMode-switch-bg-light,
+  ),
+  dark: (
+    bg: $bg-dark,
+    header-bg: $header-bg-dark,
+    text: $text-dark,
+    header-text: $header-text-dark,
+    border: $border-dark,
+    header-border: $header-border-dark,
+    intro-animation: $intro-animation-dark,
+    darkMode-switch-bg: $darkMode-switch-bg-dark,
+  ),
+);
