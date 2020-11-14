@@ -26,6 +26,7 @@
     object-fit: cover;
     background-size: cover;
     opacity: 0;
+    filter: blur(3px);
 
     @include themed() {
       animation: t($intro-animation) 1s ease-in-out 4s forwards;
@@ -38,7 +39,7 @@
 @keyframes bg-fade-light {
   from { opacity: 0; }
   to   {
-    opacity: 0.2;
+    opacity: 0.8;
   }
 }
 

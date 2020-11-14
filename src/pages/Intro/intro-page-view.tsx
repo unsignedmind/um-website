@@ -7,7 +7,7 @@ import { IntroCopyrightView } from './intro-copyright/intro-copyright-view';
 export const IntroPageView = () => {
   return (
     <>
-      <img src="images/bg.png" alt="background" className='intro-page__bg-image' />
+      <img src="images/intro-bg.jpg" alt="background" className='intro-page__bg-image' />
       <div className='intro-page__wrapper'>
         <TitleView />
         <MenuView />
