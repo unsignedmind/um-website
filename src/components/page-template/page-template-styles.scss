@@ -1,14 +1,25 @@
 @import '../../../styles/meta/_index';
 
 .page {
-	height: 100vh;
 
 	@include themed() {
 		background-color: t($bg);
 	}
 
-	&__indentation {
-		width: rem-calc(1440px);
+	&__limit {
+		max-width: rem-calc(1440px);
 		margin: 0 auto;
+	}
+
+	&__indentation {
+		margin: 0 rem-calc(20px);
+
+		@include breakpoint($tablet) {
+			margin: 0 rem-calc(40px);
+		}
+
+		@include breakpoint($tablet) {
+			margin: 0 rem-calc(60px);
+		}
 	}
 }

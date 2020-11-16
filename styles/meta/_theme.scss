@@ -87,9 +87,11 @@ $darkMode-switch-bg: 'darkMode-switch-bg';
 // Color Assignments
 $primary: $orange;
 $accent: $blue-dark;
+$bg-color-dark: #011225;
+
 
 $bg-light: $contrast-210;
-$bg-dark: $contrast-0;
+$bg-dark: $bg-color-dark;
 $text-light: $contrast-0;
 $text-dark: $contrast-210;
 $border-light: $contrast-0;
@@ -99,11 +101,11 @@ $header-text-light: $contrast-210;
 $header-text-dark: $contrast-0;
 $header-border-light: $contrast-210;
 $header-border-dark: $contrast-0;
-$header-bg-light: $contrast-0;
+$header-bg-light: $bg-color-dark;
 $header-bg-dark: $contrast-210;
 
 $darkMode-switch-bg-light: $contrast-210;
-$darkMode-switch-bg-dark: $contrast-0;
+$darkMode-switch-bg-dark: $bg-color-dark;
 
 $intro-animation-dark: bg-fade-dark;
 $intro-animation-light: bg-fade-light;

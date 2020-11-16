@@ -2,14 +2,27 @@
 
 .intro-copyright {
   display: block;
-  width: rem-calc($intro-width-desktop);
-  margin-top: rem-calc(60px);
+  width: $intro-width;
+  max-width: rem-calc($intro-max-width-mobile);
+  margin-top: rem-calc(30px);
   padding-bottom: rem-calc(10px);
   font-family: Bangers, serif;
-  font-size: rem-calc(30px);
+  font-size: rem-calc(20px);
   text-align: center;
   opacity: 0;
   animation: menu-fade 0.5s ease-in-out 6s forwards;
+
+  @include breakpoint($tablet) {
+    font-size: rem-calc(25px);
+    max-width: rem-calc($intro-max-width-desktop);
+    margin-top: rem-calc(45px);
+  }
+
+  @include breakpoint($desktop) {
+    font-size: rem-calc(30px);
+    max-width: rem-calc($intro-max-width-desktop);
+    margin-top: rem-calc(60px);
+  }
 
   @include themed() {
     color: t($text);

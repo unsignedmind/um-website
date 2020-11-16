@@ -16,16 +16,30 @@
     }
 
     &--sizing-intro {
-      font-size: rem-calc(128px);
+      font-size: rem-calc(55px);
       transform: rotate(-10deg);
+
+      @include breakpoint($tablet) {
+        font-size: rem-calc(110px);
+      }
+
+      @include breakpoint($desktop) {
+        font-size: rem-calc(128px);
+      }
     }
 
     &--primary-intro {
       position: absolute;
-      top: rem-calc(5px);
-      left: rem-calc(8px);
+      top: rem-calc(2px);
+      left: rem-calc(3px);
       color: #FF9900;
-      -webkit-text-stroke: rem-calc(5px) #1F2D3B;
+      -webkit-text-stroke: rem-calc(2px) #1F2D3B;
+
+      @include breakpoint($tablet) {
+        top: rem-calc(5px);
+        left: rem-calc(8px);
+        -webkit-text-stroke: rem-calc(5px) #1F2D3B;
+      }
     }
 
     &--accent-intro {
@@ -33,7 +47,11 @@
       top: 0;
       left: 0;
       color: #3C5874;
-      -webkit-text-stroke: rem-calc(5px) #FF9900;
+      -webkit-text-stroke: rem-calc(2px) #FF9900;
+
+      @include breakpoint($tablet) {
+        -webkit-text-stroke: rem-calc(5px) #FF9900;
+      }
     }
 
     &--sizing-header {

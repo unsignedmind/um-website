@@ -12,8 +12,10 @@ export const PageTemplateView: React.FC<Props> = ({darkModeHandler,  children}) 
 		<>
 			<div className='page'>
 				<HeaderView darkModeHandler={darkModeHandler} />
-				<div className='page__indentation'>
-					{children}
+				<div className='page__limit'>
+					<div className='page__indentation'>
+						{children}
+					</div>
 				</div>
 			</div>
 		</>

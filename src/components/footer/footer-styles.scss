@@ -1,0 +1,13 @@
+@import '../../../styles/meta/_index';
+
+.footer {
+	width: 100%;
+	padding-top: rem-calc(50px);
+	font-size: rem-calc(24px);
+	text-align: center;
+
+	@include themed() {
+		color: t($text);
+		border-top: rem-calc(1px) solid t($border);
+	}
+}

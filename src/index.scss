@@ -1,8 +1,24 @@
+@import "~foundation-sites/scss/foundation";
+@import 'styles/meta/_index';
 @import "styles/base/normalization/normalize";
 @import "styles/base/normalization/sanitize";
 @import "styles/base/components/links";
 @import "styles/base/meta/typography";
-@import "../styles/meta/theme";
+@import "styles/base/images";
+@import "styles/meta/theme";
+
+@include foundation-visibility-classes();
+@include foundation-xy-grid-classes(
+	$base-grid: true,
+	$margin-grid: true,
+	$padding-grid: true,
+	$block-grid: true,
+	$collapse: true,
+	$offset: true,
+	$vertical-grid: false,
+	$frame-grid: false
+);
+@include foundation-flex-classes;
 
 body {
 	margin: 0;
