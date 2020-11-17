@@ -13,7 +13,7 @@ export const HeaderView: React.FC<Props> = ({ darkModeHandler }) => {
 			<div className='header__container'>
 				<div className='header__main'>
 					<div className='header__brand'>
-						<HeadlineStrokeView title='UM++;' tilted={false} context='header' />
+						<HeadlineStrokeView title={['UM++;']} tilted={false} context='header' />
 					</div>
 					<nav className='header__nav'>
 						<Link to='/'>

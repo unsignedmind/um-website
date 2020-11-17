@@ -1,1 +1,13 @@
 @import '../styles/meta/_index';
+
+.theme {
+	@include themed() {
+		background-color: t($bg);
+	}
+}
+
+body {
+	@include themed() {
+		background-color: t($bg);
+	}
+}

@@ -1,21 +1,52 @@
 @import '../../../styles/meta/_index';
 
+.portrait-warning {
+  z-index: 3;
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: rem-calc(24px);
+
+  @include themed() {
+    color: t($text);
+  }
+
+  @include breakpoint('landscape') {
+    display: flex;
+  }
+}
+
 .intro-page {
   &__wrapper {
+    z-index: 3;
+    position: absolute;
+    top: 72.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
     overflow: hidden;
 
-    @include themed() {
-      background-color: t($bg);
+    animation: title-shift 1s ease-in-out 4s forwards;
+
+    @include breakpoint('landscape') {
+      display: none;
+    }
+    
+    @include breakpoint($desktop) {
+      top: 75%;
+
     }
   }
 
-  &__bg-image {
+  &__full-size {
     position: absolute;
 
     /* Full height */
@@ -24,10 +55,25 @@
 
     /* Center and scale the image nicely */
     object-fit: cover;
-    background-size: cover;
-    opacity: 0;
-    filter: blur(3px);
+    // background-size: cover;
+    background-size: 100% 100%;
+  }
 
+  &__bg-color {
+    z-index: 1;
+    opacity: 1;
+
+    animation: intro-bg-color-fade 1s ease-in-out 4s forwards;
+
+    @include themed() {
+      background-color: t($bg);
+    }
+  }
+
+  &__bg-image {
+    z-index: 0;
+    opacity: 1;
+    filter: blur(3px);
     @include themed() {
       animation: t($intro-animation) 1s ease-in-out 4s forwards;
     }
@@ -36,16 +82,34 @@
 
 /* Animations */
 
+@keyframes intro-bg-color-fade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes title-shift {
+  from { top: 72.5%; }
+  to { top: 50%}
+}
+
+@include breakpoint($desktop){
+  @keyframes title-shift {
+    from { top: 75% }
+    to { top: 50%}
+  }
+}
+
+
 @keyframes bg-fade-light {
-  from { opacity: 0; }
+  from { opacity: 0.8; }
   to   {
     opacity: 0.8;
   }
 }
 
 @keyframes bg-fade-dark {
-  from { opacity: 0; }
+  from { opacity: 1; }
   to   {
-    opacity: 0.6;
+    opacity: 1;
   }
 }

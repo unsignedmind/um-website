@@ -6,7 +6,7 @@ import { WorkPageView } from './pages/work/work-page-view';
 import { PageTemplateView } from './components/page-template/page-template-view';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const changeDarkMode = () => {
     setDarkMode(!darkMode);

@@ -7,8 +7,8 @@
     position: relative;
     width: $intro-width;
     max-width: rem-calc($intro-max-width-mobile);
-    margin-top: 50vh;
-    animation: title-shift 1s ease-in-out 4s forwards;
+    margin-top: 0;
+    // animation: title-shift 1s ease-in-out 4s forwards;
 
     @include breakpoint($tablet) {
       max-width: rem-calc($intro-max-width-desktop);
@@ -115,7 +115,9 @@
   100% { opacity: 1; }
 }
 
+/*
 @keyframes title-shift {
-  from { margin-top: 50vh }
+  from { margin-top: 0 }
   to { margin-top: 0 }
 }
+*/
