@@ -108,19 +108,19 @@
 
 @keyframes menu-arrow-fade {
   0%  {
-    border-top: rem-calc(16px) solid transparent;
-    border-bottom: rem-calc(16px) solid transparent;
-    border-left: rem-calc(36px) solid $primary;
+    border-top: rem-calc(20px) solid transparent;
+    border-bottom: rem-calc(20px) solid transparent;
+    border-left: rem-calc(34px) solid $primary;
   }
   50% {
-    border-top: rem-calc(16px) solid transparent;
-    border-bottom: rem-calc(16px) solid transparent;
-    border-left: rem-calc(36px) solid $accent;
+    border-top: rem-calc(20px) solid transparent;
+    border-bottom: rem-calc(20px) solid transparent;
+    border-left: rem-calc(34px) solid $accent;
   }
   100%  {
-    border-top: rem-calc(16px) solid transparent;
-    border-bottom: rem-calc(16px) solid transparent;
-    border-left: rem-calc(36px) solid $primary;
+    border-top: rem-calc(20px) solid transparent;
+    border-bottom: rem-calc(20px) solid transparent;
+    border-left: rem-calc(34px) solid $primary;
   }
 }
 

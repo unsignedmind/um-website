@@ -39,7 +39,7 @@
       top: rem-calc(2px);
       left: rem-calc(3px);
       color: #FF9900;
-      -webkit-text-stroke: rem-calc(2px) #1F2D3B;
+      -webkit-text-stroke: rem-calc(3px) #1F2D3B;
 
       @include breakpoint($tablet) {
         top: rem-calc(5px);
@@ -53,7 +53,7 @@
       top: 0;
       left: 0;
       color: #3C5874;
-      -webkit-text-stroke: rem-calc(2px) #FF9900;
+      -webkit-text-stroke: rem-calc(3px) #FF9900;
 
       @include breakpoint($tablet) {
         -webkit-text-stroke: rem-calc(5px) #FF9900;
