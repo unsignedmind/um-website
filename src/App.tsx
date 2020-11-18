@@ -10,7 +10,7 @@ function App() {
 
   const changeDarkMode = () => {
     setDarkMode(!darkMode);
-  }
+  };
 
   return (
     <Router>

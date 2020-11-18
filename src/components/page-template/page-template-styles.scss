@@ -1,14 +1,15 @@
 @import '../../../styles/meta/_index';
 
 .page {
-
 	@include themed() {
 		background-color: t($bg);
 	}
 
 	&__limit {
+		z-index: 0;
 		max-width: rem-calc(1440px);
 		margin: 0 auto;
+		overflow: visible;
 	}
 
 	&__indentation {

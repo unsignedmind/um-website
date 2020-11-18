@@ -14,7 +14,7 @@ export const MediaTextView: React.FC<Props> = ({showImage}) => {
 	return (
 		<div className='grid-x grid-margin-x media-text'>
 			<div className={`cell large-6 large-order-${itemOrder.image} media-text__media`}>
-				<img src="https://via.placeholder.com/630x354" alt="work-post-1" />
+				<img src="https://via.placeholder.com/630x354/ccc/000" alt="work-post-1" />
 			</div>
 			<div className={`cell large-6 large-order-${itemOrder.text} media-text__text`}>
 				<h2 className="media-text__text-headline">
