@@ -6,12 +6,12 @@ import { FooterView } from '../../components/footer/footer-view';
 
 export const WorkPageView = () => {
 	return (
-		<div className='work-page__wrapper'>
+		<>
 			<PageHeadlineView />
 			<MediaTextView showImage='left' />
 			<MediaTextView showImage='right' />
 			<MediaTextView showImage='left' />
 			<FooterView />
-		</div>
+		</>
 	);
 };

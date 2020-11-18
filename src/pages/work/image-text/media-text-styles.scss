@@ -1,17 +1,18 @@
 @import '../../../../styles/meta/_index';
 
 .media-text {
-	display: flex;
-	align-items: center;
-	// margin-bottom: rem-calc(50px);
-	margin: rem-calc(0 -10px 50px -10px);
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		margin: rem-calc(30px -10px 0 -10px);
 
-	@include breakpoint($tablet) {
-		margin: rem-calc(0 -20px 50px -20px);
-	}
+		@include breakpoint($tablet) {
+			margin: rem-calc(50px -20px 0 -20px);
+		}
 
-	@include breakpoint($desktop) {
-		margin: rem-calc(0 -30 50px -30);
+		@include breakpoint($desktop) {
+			margin: rem-calc(50px -30 0 -30);
+		}
 	}
 
 	&__media {
@@ -32,13 +33,17 @@
 
 	&__text-headline {
 		font-family: Bangers, serif;
-		font-size: rem-calc(48px);
+		font-size: rem-calc(40px);
 		margin-top: rem-calc(15px);
-		margin-bottom: rem-calc(15px);
+		margin-bottom: rem-calc(5px);
 		letter-spacing: rem-calc(2px);
 
 		@include themed() {
 			color: t($text);
+		}
+
+		@include breakpoint($tablet) {
+			font-size: rem-calc(48px);
 		}
 
 		@include breakpoint($desktop){
@@ -46,4 +51,3 @@
 		}
 	}
 }
-

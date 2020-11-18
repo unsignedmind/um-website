@@ -2,12 +2,19 @@
 
 .footer {
 	width: 100%;
-	padding-top: rem-calc(50px);
-	font-size: rem-calc(24px);
+	margin-top: rem-calc(25px);
+	padding: rem-calc(25px 0);
+	font-size: rem-calc(16px);
 	text-align: center;
 
 	@include themed() {
 		color: t($text);
 		border-top: rem-calc(1px) solid t($border);
+	}
+
+	@include breakpoint($tablet) {
+		margin-top: rem-calc(25px);
+		padding: rem-calc(25px 0);
+		font-size: rem-calc(16px);
 	}
 }

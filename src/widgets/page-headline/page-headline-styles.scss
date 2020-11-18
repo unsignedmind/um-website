@@ -5,7 +5,11 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	margin-bottom: rem-calc(50px);
+	margin: rem-calc(25px) 0;
+
+	@include breakpoint($tablet) {
+		margin: rem-calc(50px) 0;
+	}
 
 	&__divider {
 		height: rem-calc(1px);

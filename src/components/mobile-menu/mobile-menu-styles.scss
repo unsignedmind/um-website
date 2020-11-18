@@ -62,6 +62,19 @@
 		font-weight: bold;
 	}
 
+	&__dark-mode-switch-button {
+		display: block;
+		width: rem-calc(32px);
+		height: rem-calc(32px);
+		border-radius: 50%;
+		cursor: pointer;
+
+		@include themed() {
+			background-color: t($text);
+			box-shadow: rem-calc(0px 0px 4px 3px) t($text);
+		}
+	}
+
 	&__menu-list span {
 		font-family: Bangers, serif;
 		font-size: rem-calc(75px);
