@@ -26,7 +26,7 @@ export const HeaderView: React.FC<Props> = ({ darkModeHandler }) => {
 
 					</div>
 					<button className='header__dark-mode-button' onClick={() => {darkModeHandler()}}>
-						Light Mode
+						Color Mode
 					</button>
 				</div>
 			</div>

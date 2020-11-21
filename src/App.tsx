@@ -13,6 +13,8 @@ function App() {
   const changeDarkMode = () => {
     setDarkMode(!darkMode);
   };
+  
+  document.body.style.backgroundColor = darkMode ? '#011225' : '#fff';
 
   return (
     <Router>
