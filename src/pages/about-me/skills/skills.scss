@@ -1,22 +1,94 @@
 @import '../../../../styles/meta/_index';
 
 .skills {
-	&__wrapper {
-		margin-top: rem-calc(20px);
-	}
-
 	&__gradient-box {
-		height: rem-calc(637px);
-
+		width: rem-calc(290px);
+		height: rem-calc(380px);
+		padding: rem-calc(30px 15px 20px 15px);
 
 		@include themed {
-			background: linear-gradient(7.7deg, t($about-gradient) 0%, rgba(196, 196, 196, 0) 87.83%);
+			color: t($text);
+			background: linear-gradient(7.7deg, t($about-skill-gradient) 0%, rgba(196, 196, 196, 0) 87.83%);
+		}
+
+		@include breakpoint($tablet) {
+			width: rem-calc(305px);
+			height: rem-calc(430px);
+		}
+
+		@include breakpoint(content) {
+			width: rem-calc(440px);
+			height: rem-calc(512px);
 		}
 
 		&--bordered {
 			@include themed {
-				border: rem-calc(1px) solid t($about-gradient-border);
+				box-shadow: rem-calc(0 0 10px 0) t($about-skill-gradient-border);
 			}
 		}
+	}
+
+	&__headline {
+		width: 100%;
+		text-align: center;
+	}
+
+	&__tech {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__tech-group {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		font-size: rem-calc(18px);
+
+		span {
+			width: rem-calc(115px);
+			margin-left: rem-calc(30px);
+			font-weight: bold;
+			font-size: rem-calc(18px);
+			text-align: left;
+
+			@include breakpoint(content) {
+				margin-left: rem-calc(60px);
+			}
+		}
+
+		&:not(last-child) {
+			margin-bottom: rem-calc(15px);
+		}
+	}
+
+	&__tech-group-icons {
+		display: flex;
+		justify-content: center;
+		width: rem-calc(128px);
+
+		img:nth-child(2) {
+			margin-left: rem-calc(10px);
+		}
+
+		img {
+			height: rem-calc(40px);
+
+			@include breakpoint($tablet) {
+				height: rem-calc(50px);
+			}
+
+			@include breakpoint(content) {
+				height: rem-calc(64px);
+			}
+
+		}
+	}
+}
+
+.splide__arrows, .splide__pagination {
+	@include breakpoint($tablet) {
+		display: none !important;
 	}
 }

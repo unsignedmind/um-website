@@ -4,6 +4,9 @@ import './text-gradient.scss'
 export const TextGradient = () => {
 	return (
 		<div className='text-gradient__wrapper'>
+			<h2 className='text-gradient__headline'>
+				<span className='text-gradient__headline-dollar'>$</span> whoami
+			</h2>
 			<p>My Name is Niklas. I'm a frontend developer who mainly focuses on Angular.</p>
 
 			<p>How did I come to web development? It all started in the 4th grade when my big brother showed me how to create a website for my Flash animations using Adobe Dreamweaver. From then on it went on. First I learned HTML and CSS. Later in middle school I started to create some projects with PHP. The biggest ones were a film critic website and a tournament bracket solution.</p>
