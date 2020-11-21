@@ -1,8 +1,8 @@
-@import "./styles/meta/_variables.scss";
+@import "../../meta/variables";
 
 body {
   font-family: Montserrat, serif;
-  font-size: 14px;
+  font-size: $mobile-font-size;
 
   @include breakpoint($tablet) {
     font-size: $global-font-size;

@@ -9,13 +9,13 @@ export const TitleView = () => {
 	const title: Array<string> = isMobile ? ['Unsigned', 'mind++;'] : ['Unsignedmind++;'];
 
 	return (
-		<div className='unsigned-mind__title-wrapper'>
-			<div className='unsigned-mind__accent-line unsigned-mind__accent-line--top-left-white unsigned-mind__accent-line--animation' />
-			<div className='unsigned-mind__title'>
+		<div className='title__title-wrapper'>
+			<div className='title__accent-line title__accent-line--top-left-white title__accent-line--animation' />
+			<div className='title__title'>
 				<HeadlineStrokeView title={title} tilted={true} context='intro'/>
 			</div>
-			<div className='unsigned-mind__motto'>Positive Forward Thinking</div>
-			<div className='unsigned-mind__accent-line unsigned-mind__accent-line--bottom-right-white unsigned-mind__accent-line--animation' />
+			<div className='title__motto'>Positive Forward Thinking</div>
+			<div className='title__accent-line title__accent-line--bottom-right-white title__accent-line--animation' />
 		</div>
 	);
 };

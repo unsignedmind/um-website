@@ -2,9 +2,8 @@
 
 .footer {
 	width: 100%;
-	margin-top: rem-calc(25px);
-	padding: rem-calc(25px 0);
-	font-size: rem-calc(16px);
+	margin-top: rem-calc($mobile-component-indentation);
+	padding: rem-calc($mobile-component-indentation 0);
 	text-align: center;
 
 	@include themed() {
@@ -13,8 +12,7 @@
 	}
 
 	@include breakpoint($tablet) {
-		margin-top: rem-calc(25px);
-		padding: rem-calc(25px 0);
-		font-size: rem-calc(16px);
+		margin-top: rem-calc($tablet-desktop-component-indentation);
+		padding: rem-calc($tablet-desktop-component-indentation 0);
 	}
 }

@@ -1,6 +1,19 @@
 @import 'variables';
 // @fixme variables is imported in index and functions.
 
+
+@function z($list, $element) {
+
+	$z-index: index($list, $element);
+
+	@if $z-index {
+		@return $z-index;
+	}
+
+	@warn 'There is no item "#{$element}" in this list; choose one of: #{$list}';
+	@return null;
+}
+
 /// Removes the unit (e.g. px, em, rem) from a value, returning the number only.
 ///
 /// @param {Number} $num - Number to strip unit from.
@@ -37,11 +50,11 @@
 	}
 
 	@if $count == 1 {
-		@return -kps-convert-to-rem($values, $base);
+		@return -um-convert-to-rem($values, $base);
 	}
 
 	@for $i from 1 through $count {
-		$rem-values: append($rem-values, -kps-convert-to-rem(nth($values, $i), $base));
+		$rem-values: append($rem-values, -um-convert-to-rem(nth($values, $i), $base));
 	}
 
 	@return $rem-values;
@@ -55,7 +68,7 @@
 /// @param {Number} $base [null] - Base for pixel conversion.
 ///
 /// @returns {Number} A number in rems, calculated based on the given value and the base pixel value. rem values are passed through as is.
-@function -kps-convert-to-rem($value, $base: null) {
+@function -um-convert-to-rem($value, $base: null) {
 	// Check if the value is a number
 	@if type-of($value) != 'number' {
 		@warn inspect($value) + ' was passed to rem-calc(), which is not a number.';
@@ -93,6 +106,7 @@
 	// Then the value is converted to ems
 	@return strip-unit($value) * 1em;
 }
+
 @function t($key) {
 	@return map-get($theme-map, $key);
 }

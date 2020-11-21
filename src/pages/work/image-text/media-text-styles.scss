@@ -4,15 +4,6 @@
 	&__wrapper {
 		display: flex;
 		align-items: center;
-		margin: rem-calc(30px -10px 0 -10px);
-
-		@include breakpoint($tablet) {
-			margin: rem-calc(50px -20px 0 -20px);
-		}
-
-		@include breakpoint($desktop) {
-			margin: rem-calc(50px -30 0 -30);
-		}
 	}
 
 	&__media {

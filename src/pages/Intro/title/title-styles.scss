@@ -1,6 +1,6 @@
 @import '../../../../styles/meta/_index';
 
-.unsigned-mind {
+.title {
   &__title-wrapper {
     display: flex;
     justify-content: center;
@@ -8,7 +8,6 @@
     width: $intro-width;
     max-width: rem-calc($intro-max-width-mobile);
     margin-top: 0;
-    // animation: title-shift 1s ease-in-out 4s forwards;
 
     @include breakpoint($tablet) {
       max-width: rem-calc($intro-max-width-desktop);
@@ -18,11 +17,11 @@
   &__title {
     display: inline-block;
     justify-content: center;
-    padding: rem-calc(15px 0 25px 0);
+    padding: rem-calc(15px 0 40px 0);
     animation: fadein 1s ease-in-out forwards;
 
     @include breakpoint($tablet) {
-      padding: rem-calc(30px 0 50px 0);
+      padding: rem-calc(30px 0 80px 0);
     }
   }
 
@@ -30,7 +29,6 @@
     position: absolute;
     right: rem-calc(7px);
     bottom: rem-calc(7px);
-    font-size: rem-calc(12px);
     opacity: 0;
     animation: motto-blink 0.2s linear 3.3s;
     animation-fill-mode: forwards;

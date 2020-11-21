@@ -20,13 +20,16 @@
     font-style: normal;
     font-weight: normal;
     letter-spacing: rem-calc(-1px);
+    line-height: 0.9;
 
     &--sizing-intro {
       font-size: rem-calc(70px);
       transform: rotate(-10deg);
+      padding-top: rem-calc(10px);
 
       @include breakpoint($tablet) {
         font-size: rem-calc(110px);
+        padding-top: rem-calc(25px);
       }
 
       @include breakpoint($desktop) {

@@ -1,8 +1,5 @@
+$mobile-font-size: 14px;
 $global-font-size: 16px;
-$intro-width: 90%;
-$intro-max-width-mobile: 420px;
-$intro-max-width-tablet: 840px;
-$intro-max-width-desktop: 840px;
 
 $tablet: 'medium';
 $desktop: 'xlarge';
@@ -21,3 +18,20 @@ $grid-margin-gutters: (
 	large: 60px,
 	xlarge: 60px,
 );
+
+$portrait-info-media-query-height: 375px;
+
+/* Indentations */
+$intro-width: 90%;
+$intro-max-width-mobile: 420px;
+$intro-max-width-tablet: 840px;
+$intro-max-width-desktop: 840px;
+
+$mobile-component-indentation: 25px;
+$tablet-desktop-component-indentation: 50px;
+
+/* Z-Index Contexts */
+$children-of-mobile-menu: burger, burger-trigger;
+$children-of-mobile-menu-wrapper: background, list;
+$children-of-page: mobile-menu, page-content-limit;
+$route-intro-page: bg-image, bg-color, container, info;

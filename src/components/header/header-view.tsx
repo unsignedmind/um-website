@@ -20,7 +20,7 @@ export const HeaderView: React.FC<Props> = ({ darkModeHandler }) => {
 							<Link to='/'>
 								<span className='header__nav-item'>Start</span>
 							</Link>
-							<Link to='/work'>
+							<Link to='/my-work'>
 								<span className='header__nav-item'>My Work</span>
 							</Link>
 							<Link to='/about-me'>

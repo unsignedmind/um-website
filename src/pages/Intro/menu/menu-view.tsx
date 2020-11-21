@@ -8,19 +8,19 @@ export const MenuView = () => {
 			<ul className='menu__list'>
 				<Link to='/my-work'>
 					<li className='menu__item'>
-						<span className='menu__item-name'>My Work</span>
+						<span className='menu__item-name a'>My Work</span>
 						<span className='menu__item-icon' />
 					</li>
 				</Link>
 				<Link to='/about-me'>
 					<li className='menu__item'>
-						<span className='menu__item-name'>About Me</span>
+						<span className='menu__item-name a'>About Me</span>
 						<span className='menu__item-icon' />
 					</li>
 				</Link>
 				<Link to='/contact'>
 					<li className='menu__item'>
-						<span className='menu__item-name'>Contact</span>
+						<span className='menu__item-name a'>Contact</span>
 						<span className='menu__item-icon' />
 					</li>
 				</Link>

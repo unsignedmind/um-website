@@ -6,7 +6,7 @@
 	}
 
 	&__limit {
-		z-index: 0;
+		z-index: z($children-of-page, page-content-limit);
 		max-width: rem-calc(1440px);
 		margin: 0 auto;
 		overflow: visible;
@@ -21,6 +21,14 @@
 
 		@include breakpoint($tablet) {
 			margin: 0 rem-calc(60px);
+		}
+	}
+
+	&__component-indentation {
+		margin: rem-calc($mobile-component-indentation 0);
+
+		@include breakpoint($tablet) {
+			margin: rem-calc($tablet-desktop-component-indentation 0);
 		}
 	}
 }

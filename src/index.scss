@@ -1,11 +1,11 @@
 @import "~foundation-sites/scss/foundation";
 @import 'styles/meta/_index';
+@import "styles/meta/theme";
 @import "styles/base/normalization/normalize";
 @import "styles/base/normalization/sanitize";
-@import "styles/base/components/links";
-@import "styles/base/meta/typography";
+@import "styles/base/typography/base";
+@import "styles/base/typography/links";
 @import "styles/base/images";
-@import "styles/meta/theme";
 
 @include foundation-visibility-classes();
 @include foundation-xy-grid-classes(
