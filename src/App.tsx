@@ -16,12 +16,15 @@ import { UIStore } from './state/state';
     setDarkMode(!darkMode);
   };
 
-  const history = useHistory()
+  const history = useHistory();
+  let prevRoute: string;
 
   useEffect(() => {
     return history.listen((location) => {
-      UIStore.update(s => { s.showMenu = false });
-      console.log('Route changed', location.pathname);
+      if (location.pathname !== prevRoute) {
+        UIStore.update(s => { s.showMenu = false });
+      }
+      prevRoute = location.pathname;
     })
   },[history])
 
