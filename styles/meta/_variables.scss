@@ -34,5 +34,6 @@ $tablet-desktop-component-indentation: 50px;
 /* Z-Index Contexts */
 $children-of-mobile-menu: burger, burger-trigger;
 $children-of-mobile-menu-wrapper: background, list;
-$children-of-page: mobile-menu, page-content-limit;
-$route-intro-page: bg-image, bg-color, container, info;
+$children-of-page: slider-controls-placeholder, mobile-menu, page-content-limit;
+$route-intro-page: bg-image, bg-color, container, skip, info;
+$route-about-page: slider-controls;

@@ -48,10 +48,14 @@
 
 		span {
 			width: rem-calc(115px);
-			margin-left: rem-calc(30px);
+			margin-left: rem-calc(15px);
 			font-weight: bold;
 			font-size: rem-calc(18px);
 			text-align: left;
+
+			@include breakpoint($tablet) {
+				margin-left: rem-calc(25px);
+			}
 
 			@include breakpoint(content) {
 				margin-left: rem-calc(60px);
@@ -66,7 +70,15 @@
 	&__tech-group-icons {
 		display: flex;
 		justify-content: center;
-		width: rem-calc(128px);
+		width: rem-calc(90px);
+
+		@include breakpoint($tablet) {
+			width: rem-calc(110px);
+		}
+
+		@include breakpoint(content) {
+			width: rem-calc(128px);
+		}
 
 		img:nth-child(2) {
 			margin-left: rem-calc(10px);
@@ -88,6 +100,8 @@
 }
 
 .splide__arrows, .splide__pagination {
+	z-index: z($route-about-page, slider-controls);
+
 	@include breakpoint($tablet) {
 		display: none !important;
 	}

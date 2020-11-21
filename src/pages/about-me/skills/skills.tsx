@@ -12,25 +12,6 @@ export const Skills = () => {
 				start: 1,
 				focus: 'center',
 				autoWidth: true,
-				fixedWidth: '18.125rem',
-				breakpoints: {
-					768: {
-						padding: {
-							right: '0.8rem',
-							left: '0.8rem',
-						},
-						classes: {
-							//pagination: 'splide__pagination skills__slider-pagination',
-						},
-						//drag: true,
-					},
-					1920: {
-						//drag: false,
-						classes: {
-							//pagination: 'splide__pagination skills__slider-pagination',
-						}
-					}
-				},
 			}
 		}
 	>
