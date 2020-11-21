@@ -143,6 +143,11 @@
 			transform: scale(1);
 			opacity: 1;
 			pointer-events: unset;
+
+			.splide__arrows, .splide__pagination {
+				display: none;
+				pointer-events: none;
+			}
 		}
 
 		&:checked ~ .mobile-menu__burger--s {
@@ -157,4 +162,9 @@
 			display: none;
 		}
 	}
+}
+
+@keyframes hideMenu {
+	from { height: 100% }
+	to { height: rem-calc(90px) }
 }

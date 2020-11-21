@@ -20,13 +20,13 @@ function App() {
     <Router>
       <div className={'theme ' + (darkMode ? 'theme--dark' : 'theme--default')}>
         <Route path='/' component={IntroPage} exact />
-        <Route path='/my-work' component={WorkPage}>
+        <Route path='/my-work'>
           <PageTemplateView darkModeHandler={changeDarkMode}><WorkPage /></PageTemplateView>
         </Route>
-        <Route path='/about-me' component={WorkPage}>
+        <Route path='/about-me'>
           <PageTemplateView darkModeHandler={changeDarkMode}><About /></PageTemplateView>
         </Route>
-        <Route path='/contact' component={WorkPage}>
+        <Route path='/contact'>
           <PageTemplateView darkModeHandler={changeDarkMode}><Contact /></PageTemplateView>
         </Route>
       </div>

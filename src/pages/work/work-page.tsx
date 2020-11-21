@@ -5,6 +5,7 @@ import { MediaText } from './image-text/media-text';
 import { FooterView } from '../../components/footer/footer-view';
 
 export const WorkPage = () => {
+
 	return (
 		<>
 			<PageHeadline headline={'My Work'} />
