@@ -24,8 +24,10 @@ export const MobileMenuView: React.FC<Props> = ({ darkModeHandler }) => {
 					<Link to='/about-me'>About Me</Link>
 					<Link to='/contact'>Contact</Link>
 					<div className='mobile-menu__menu-list-dark-mode'>
-						<div className='mobile-menu__menu-list-dark-mode-label'>Light Switch</div>
-						<button className='mobile-menu__dark-mode-switch-button' onClick={() => {darkModeHandler()}} />
+						<button className='mobile-menu__dark-mode-trigger-button' onClick={() => {darkModeHandler()}}>
+							<div className='mobile-menu__menu-list-dark-mode-label'>Light Mode</div>
+							<button className='dark-mode-indicator'/>
+						</button>
 					</div>
 				</nav>
 			</div>

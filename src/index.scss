@@ -5,6 +5,7 @@
 @import "styles/base/normalization/sanitize";
 @import "styles/base/typography/base";
 @import "styles/base/typography/links";
+@import "styles/base/components/dark-mode";
 @import "styles/base/images";
 
 @include foundation-visibility-classes();

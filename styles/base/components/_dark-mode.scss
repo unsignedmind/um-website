@@ -1,0 +1,15 @@
+.dark-mode-indicator {
+	display: block;
+	width: rem-calc(32px);
+	height: rem-calc(32px);
+	border-radius: 50%;
+	border-width: rem-calc(2px);
+	border-style: outset;
+	border-color: rgb(118, 118, 118) rgb(133, 133, 133);
+	cursor: pointer;
+
+	@include themed() {
+		background-color: t($text);
+		box-shadow: rem-calc(0px 0px 4px 3px) t($text);
+	}
+}

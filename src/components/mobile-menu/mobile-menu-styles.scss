@@ -76,17 +76,10 @@
 		font-weight: bold;
 	}
 
-	&__dark-mode-switch-button {
-		display: block;
-		width: rem-calc(32px);
-		height: rem-calc(32px);
-		border-radius: 50%;
-		cursor: pointer;
-
-		@include themed() {
-			background-color: t($text);
-			box-shadow: rem-calc(0px 0px 4px 3px) t($text);
-		}
+	&__dark-mode-trigger-button {
+		display: flex;
+		background: transparent;
+		border: 0;
 	}
 
 	&__menu-list a {
@@ -111,6 +104,7 @@
 		font-size: rem-calc(28px);
 		color: $primary;
 		border-radius: rem-calc(5px);
+		border: rem-calc(1px) solid #d3d3d3;
 		transition: 0.8s;
 
 		@include themed {
