@@ -1,11 +1,11 @@
 import React from 'react';
-import './media-text-styles.scss';
+import './media-text.scss';
 
 interface Props {
 	showImage: 'left' | 'right';
 }
 
-export const MediaTextView: React.FC<Props> = ({showImage}) => {
+export const MediaText: React.FC<Props> = ({showImage}) => {
 	const itemOrder = {
 		image: showImage === 'left' ? 1 : 2,
 		text: showImage === 'left' ? 2 : 1,

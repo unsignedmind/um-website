@@ -1,5 +1,5 @@
 import React from 'react';
-import './headline-stroke-styles.scss'
+import './headline-stroke.scss'
 
 interface Props {
 	title: Array<string>;
@@ -7,7 +7,7 @@ interface Props {
 	context: 'header' | 'intro'
 }
 
-export const HeadlineStrokeView: React.FC<Props> = ({ title, tilted = false, context }) => {
+export const HeadlineStroke: React.FC<Props> = ({ title, tilted = false, context }) => {
 
 	const titleTemplate = (hidden: boolean = false): any => {
 		const temp: Array<any> = [];

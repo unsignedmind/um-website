@@ -1,10 +1,10 @@
 import React from 'react';
-import './intro-page-styles.scss'
-import { TitleView } from './title/title-view';
-import { MenuView } from './menu/menu-view';
-import { IntroCopyrightView } from './intro-copyright/intro-copyright-view';
+import './intro-page.scss'
+import { Title } from './title/title';
+import { IntroMenu } from './menu/intro-menu';
+import { IntroCopyright } from './intro-copyright/intro-copyright';
 
-export const IntroPageView = () => {
+export const IntroPage = () => {
   return (
     <>
       <div className='intro-page__full-size intro-page__bg-color' />
@@ -12,9 +12,9 @@ export const IntroPageView = () => {
       <div className='portrait-info'>Please rotate device to portrait view</div>
       <div className='intro-page__container'>
         <div className='intro-page__wrapper'>
-          <TitleView />
-          <MenuView />
-          <IntroCopyrightView />
+          <Title />
+          <IntroMenu />
+          <IntroCopyright />
         </div>
       </div>
     </>

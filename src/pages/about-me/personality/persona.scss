@@ -1,0 +1,32 @@
+@import '../../../../styles/meta/_index';
+
+.persona {
+	&__wrapper {
+
+	}
+
+	&__headlines {
+		display: flex;
+		align-items: center;
+
+		@include themed {
+			color: t($text);
+		}
+
+	}
+
+	&__image-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__image {
+		width: rem-calc(248px);
+		height: rem-calc(248px);
+		border-radius: 50%;
+
+		@include themed {
+			border: rem-calc(5px) solid $primary;
+		}
+	}
+}

@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import './App.scss';
-import { IntroPageView } from './pages/Intro/intro-page-view';
-import { WorkPageView } from './pages/work/work-page-view';
+import { IntroPage } from './pages/Intro/intro-page';
+import { WorkPage } from './pages/work/work-page';
 import { PageTemplateView } from './components/page-template/page-template-view';
-import ContactView from './pages/contact/contact-view';
-import { AboutView } from './pages/about-me/about-view';
+import Contact from './pages/contact/contact';
+import { About } from './pages/about-me/about';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const changeDarkMode = () => {
     setDarkMode(!darkMode);
   };
-  
+
   document.body.style.backgroundColor = darkMode ? '#011225' : '#fff';
 
   return (
     <Router>
       <div className={'theme ' + (darkMode ? 'theme--dark' : 'theme--default')}>
-        <Route path='/' component={IntroPageView} exact />
-        <Route path='/my-work' component={WorkPageView}>
-          <PageTemplateView darkModeHandler={changeDarkMode}><WorkPageView /></PageTemplateView>
+        <Route path='/' component={IntroPage} exact />
+        <Route path='/my-work' component={WorkPage}>
+          <PageTemplateView darkModeHandler={changeDarkMode}><WorkPage /></PageTemplateView>
         </Route>
-        <Route path='/about-me' component={WorkPageView}>
-          <PageTemplateView darkModeHandler={changeDarkMode}><AboutView /></PageTemplateView>
+        <Route path='/about-me' component={WorkPage}>
+          <PageTemplateView darkModeHandler={changeDarkMode}><About /></PageTemplateView>
         </Route>
-        <Route path='/contact' component={WorkPageView}>
-          <PageTemplateView darkModeHandler={changeDarkMode}><ContactView /></PageTemplateView>
+        <Route path='/contact' component={WorkPage}>
+          <PageTemplateView darkModeHandler={changeDarkMode}><Contact /></PageTemplateView>
         </Route>
       </div>
     </Router>

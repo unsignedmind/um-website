@@ -1,0 +1,22 @@
+@import '../../../../styles/meta/_index';
+
+.skills {
+	&__wrapper {
+		margin-top: rem-calc(20px);
+	}
+
+	&__gradient-box {
+		height: rem-calc(637px);
+
+
+		@include themed {
+			background: linear-gradient(7.7deg, t($about-gradient) 0%, rgba(196, 196, 196, 0) 87.83%);
+		}
+
+		&--bordered {
+			@include themed {
+				border: rem-calc(1px) solid t($about-gradient-border);
+			}
+		}
+	}
+}

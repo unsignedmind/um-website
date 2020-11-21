@@ -83,6 +83,8 @@ $border: 'border';
 $header-border: 'header-border';
 $intro-animation: 'intro-animation';
 $darkMode-switch-bg: 'darkMode-switch-bg';
+$about-gradient: 'about-gradient';
+$about-gradient-border: 'about-gradient-border';
 
 // Color Assignments
 $primary: $orange;
@@ -110,6 +112,12 @@ $darkMode-switch-bg-dark: $bg-color-dark;
 $intro-animation-dark: bg-fade-dark;
 $intro-animation-light: bg-fade-light;
 
+$about-gradient-light: #FFC977;
+$about-gradient-dark: #0D233A;
+
+$about-gradient-border-light: #FFDEAC;
+$about-gradient-border-dark: $blue-light;
+
 
 /* THEME */
 
@@ -123,6 +131,8 @@ $themes: (
     header-border: $header-border-light,
     intro-animation: $intro-animation-light,
     darkMode-switch-bg: $darkMode-switch-bg-light,
+    about-gradient: $about-gradient-light,
+    about-gradient-border: $about-gradient-border-light,
   ),
   dark: (
     bg: $bg-dark,
@@ -133,5 +143,7 @@ $themes: (
     header-border: $header-border-dark,
     intro-animation: $intro-animation-dark,
     darkMode-switch-bg: $darkMode-switch-bg-dark,
+    about-gradient: $about-gradient-dark,
+    about-gradient-border: $about-gradient-border-dark,
   ),
 );

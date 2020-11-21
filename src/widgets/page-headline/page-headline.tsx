@@ -1,11 +1,11 @@
 import React from 'react';
-import './page-headline-styles.scss'
+import './page-headline.scss'
 
 interface Props {
 	headline: string
 }
 
-export const PageHeadlineView: React.FC<Props> = ({headline}) => {
+export const PageHeadline: React.FC<Props> = ({headline}) => {
 	return (
 		<div className='page-headline page__component-indentation'>
 			<span className='page-headline__divider' />

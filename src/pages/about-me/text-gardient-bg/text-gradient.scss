@@ -1,0 +1,17 @@
+@import '../../../../styles/meta/_index';
+
+.text-gradient {
+	&__wrapper {
+		width: 100%;
+		margin-top: rem-calc(35px);
+		padding: rem-calc(35px);
+		border-radius: rem-calc(5px);
+
+
+		@include themed {
+			color: t($text);
+			background: linear-gradient(180deg, t($about-gradient) 0%, rgba(255, 255, 255, 0) 100%);
+			// background: linear-gradient(180deg, #F8F8F8 67.71%, rgba(255, 255, 255, 0) 100%);
+		}
+	}
+}

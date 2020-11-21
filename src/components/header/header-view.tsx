@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeadlineStrokeView } from '../../widgets/headline-stroke/headline-stroke-view';
+import { HeadlineStroke } from '../../widgets/headline-stroke/headline-stroke';
 import './header-styles.scss';
 import { Link } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ export const HeaderView: React.FC<Props> = ({ darkModeHandler }) => {
 				<div className='header__container'>
 					<div className='header__main'>
 						<div className='header__brand'>
-							<HeadlineStrokeView title={['UnsignedMind++;']} tilted={false} context='header' />
+							<HeadlineStroke title={['UnsignedMind++;']} tilted={false} context='header' />
 						</div>
 						<div className='header__brand-explain-line'>Positive Forward Thinking</div>
 						<nav className='header__nav'>
