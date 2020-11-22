@@ -14,7 +14,7 @@ export const MobileMenuView: React.FC = () => {
 				<span>X</span>
 			</div>
 			<div className='mobile-menu__burger mobile-menu__burger--s'>
-				<span>{'///'}</span>
+				<span>{'|||'}</span>
 			</div>
 			<div className='mobile-menu__wrapper'>
 				<img src={"images/intro-bg.jpg"} alt="background" className='mobile-menu__bg-image' />
