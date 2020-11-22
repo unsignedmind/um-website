@@ -1,6 +1,6 @@
 import { Store } from "pullstate";
 
 export const UIStore = new Store({
-	isDarkMode: true,
+	darkMode: true,
 	showMenu: false,
 });

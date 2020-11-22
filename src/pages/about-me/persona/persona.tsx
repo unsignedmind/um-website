@@ -8,16 +8,15 @@ export const Persona = () => {
 				<div className='persona__image-wrapper'>
 					<img className='persona__image' src="images/um-dev.jpg" alt="image of developer" />
 				</div>
-				<div className="persona__interests-wrapper">
+				<div className="persona__interests-wrapper-mobile-tablet">
 					<div className='persona__headline-group persona__headline-group--primary'>
-						Frontend <br/> Developer
+						<span>Frontend</span><span>Developer</span>
 					</div>
 					<div className='persona__headline-group persona__headline-group--secondary persona__headline-group--evenly'>
 						<span>Designer</span>
 						<span>Photographer</span>
 					</div>
-					<div className='persona__headline-group persona__headline-group--secondary persona__headline-group--evenly
-					'>
+					<div className='persona__headline-group persona__headline-group--secondary persona__headline-group--evenly'>
 						<span>FullStack</span>
 						<span>MetaEnthusiasts</span>
 					</div>

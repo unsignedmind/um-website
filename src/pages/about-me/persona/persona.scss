@@ -1,21 +1,25 @@
 @import '../../../../styles/meta/_index';
 
 .persona {
-	&__wrapper {
-
-	}
-
 	&__card {
+		display: flex;
+		flex-direction: column;
 		padding: rem-calc(25px);
 		border-radius: rem-calc(5px);
-		// background: linear-gradient(180deg, #01142B 0%, #1F5386 29.03%, rgba(1, 18, 37, 0) 53.12%);
+
 		@include themed {
 			border: rem-calc(1px) solid t($about-card-gradient-border);
 			background: linear-gradient(180deg, t(bg) 0%, t($about-card-gradient) 29.03%, t(bg) 53.12%);
 		}
+
+		@include breakpoint($tablet) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-evenly;
+		}
 	}
 
-	&__interests-wrapper {
+	&__interests-wrapper-mobile-tablet {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -31,10 +35,21 @@
 		}
 
 		&--primary {
+			display: flex;
+			flex-direction: column;
 			font-size: rem-calc(42px);
 			margin-bottom: rem-calc(15px);
 			padding-bottom: rem-calc(15px);
 			border-bottom: rem-calc(1px) solid #ddd;
+
+			@include breakpoint(large) {
+				flex-direction: row;
+				font-size: rem-calc(50px);
+
+				span:first-child {
+					margin-right: rem-calc(20px);
+				}
+			}
 		}
 
 		&--secondary {
@@ -43,6 +58,10 @@
 			margin: rem-calc(5px 0);
 			font-size: rem-calc(18px);
 			opacity: 0.5;
+
+			@include breakpoint(large) {
+				font-size: rem-calc(24px);
+			}
 		}
 
 		&--evenly {
@@ -65,6 +84,7 @@
 		height: rem-calc(186px);
 		border-radius: 50%;
 		background-color: $primary;
+		filter: drop-shadow(2px 3px 4px #000000);
 
 		@include themed {
 			border: rem-calc(5px) solid $primary;

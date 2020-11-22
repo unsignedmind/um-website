@@ -6,6 +6,23 @@ import { FooterView } from '../../components/footer/footer-view';
 
 export const WorkPage = () => {
 
+	const articles = [
+		{
+			headline: 'Brand & Design & Development',
+			text: [
+				'Logo in 3D und SVG',
+			],
+		},
+		{
+			headline: 'Figma Designs',
+			text: [],
+		},
+		{
+			headline: 'Experience eCommerce',
+			text: [],
+		},
+	];
+
 	return (
 		<>
 			<PageHeadline headline={'My Work'} />

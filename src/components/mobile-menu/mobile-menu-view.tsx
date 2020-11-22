@@ -3,20 +3,13 @@ import './mobile-menu-styles.scss';
 import { Link } from 'react-router-dom';
 import { UIStore } from '../../state/state';
 
-interface Props {
-	darkModeHandler: () => void;
-}
 
-export const MobileMenuView: React.FC<Props> = ({ darkModeHandler }) => {
+export const MobileMenuView: React.FC = () => {
 	const showMenu = UIStore.useState(s => s.showMenu);
-
-	const changeMenuState = function(state: any) {
-		state.showMenu = !state.showMenu;
-	}
 
 	return (
 		<div className='mobile-menu' style={{ animation: showMenu ? '' : 'hideMenu 0s linear 0.8s forwards' }} >
-			<input type='checkbox' className='mobile-menu__burger-trigger' aria-label='mobile-menu' onClick={function(){UIStore.update(changeMenuState)}}/>
+			<input type='checkbox' className='mobile-menu__burger-trigger' aria-label='mobile-menu' onClick={function(){UIStore.update(s => { s.showMenu = !s.showMenu })}}/>
 			<div className='mobile-menu__burger mobile-menu__burger--x'>
 				<span>X</span>
 			</div>
@@ -31,7 +24,7 @@ export const MobileMenuView: React.FC<Props> = ({ darkModeHandler }) => {
 					<Link to='/about-me'>About Me</Link>
 					<Link to='/contact'>Contact</Link>
 					<div className='mobile-menu__menu-list-dark-mode'>
-						<button className='mobile-menu__dark-mode-trigger-button' onClick={() => {darkModeHandler()}}>
+						<button className='mobile-menu__dark-mode-trigger-button' onClick={() => {UIStore.update(s => {s.darkMode = !s.darkMode})}}>
 							<div className='mobile-menu__menu-list-dark-mode-label'>Color Mode</div>
 							<div className='dark-mode-indicator'/>
 						</button>

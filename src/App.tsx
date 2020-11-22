@@ -9,12 +9,8 @@ import { About } from './pages/about-me/about';
 import { UIStore } from './state/state';
 
 
-  function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const changeDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+function App() {
+  const darkMode = UIStore.useState(s => s.darkMode)
 
   const history = useHistory();
   let prevRoute: string;
@@ -34,13 +30,13 @@ import { UIStore } from './state/state';
     <div className={'theme ' + (darkMode ? 'theme--dark' : 'theme--default')}>
       <Route path='/' component={IntroPage} exact />
       <Route path='/my-work'>
-        <PageTemplateView darkModeHandler={changeDarkMode}><WorkPage /></PageTemplateView>
+        <PageTemplateView><WorkPage /></PageTemplateView>
       </Route>
       <Route path='/about-me'>
-        <PageTemplateView darkModeHandler={changeDarkMode}><About /></PageTemplateView>
+        <PageTemplateView><About /></PageTemplateView>
       </Route>
       <Route path='/contact'>
-        <PageTemplateView darkModeHandler={changeDarkMode}><Contact /></PageTemplateView>
+        <PageTemplateView><Contact /></PageTemplateView>
       </Route>
     </div>
   );

@@ -65,6 +65,10 @@
   &__brand-explain-line {
     display: none;
 
+    @include themed {
+      color: t($header-text);
+    }
+
     @include breakpoint(rem-calc(640px)) {
       display: flex;
       align-items: baseline;
@@ -121,22 +125,11 @@
     display: none;
     align-items: center;
     justify-self: flex-end;
-    padding: rem-calc(5px 0);
+    width: rem-calc(32px);
+    height: rem-calc(32px);
     border: 0;
-    border-radius: rem-calc(3px);
     background: transparent;
-    white-space: pre-wrap;
     cursor: pointer;
-
-    @include themed() {
-      color: t($bg);
-      border: rem-calc(1px) solid t($bg);
-      background-color: t($text);
-
-      &:hover {
-        box-shadow: rem-calc(0px 0px 2px 2px) t($bg);
-      }
-    }
 
     @include breakpoint($tablet) {
       display: block;

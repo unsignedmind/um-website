@@ -2,12 +2,11 @@ import React from 'react';
 import { HeadlineStroke } from '../../widgets/headline-stroke/headline-stroke';
 import './header-styles.scss';
 import { Link } from 'react-router-dom';
+import { UIStore } from '../../state/state';
 
-interface Props {
-	darkModeHandler: () => void;
-}
+export const HeaderView: React.FC = () => {
+	const darkMode = UIStore.useState(s => s.darkMode)
 
-export const HeaderView: React.FC<Props> = ({ darkModeHandler }) => {
 	return (
 		<>
 			<div className='header'>
@@ -25,8 +24,12 @@ export const HeaderView: React.FC<Props> = ({ darkModeHandler }) => {
 						</nav>
 
 					</div>
-					<button className='header__dark-mode-button' onClick={() => {darkModeHandler()}}>
-						Color Mode
+					<button className='header__dark-mode-button' onClick={() => {UIStore.update(s => {s.darkMode = !s.darkMode})}}>
+						{
+							!darkMode
+							? <img src={"images/icons/dark-mode.svg"} alt="dark-mode" />
+							: <img src={"images/icons/light-mode.svg"} alt="light-mode" />
+						}
 					</button>
 				</div>
 			</div>
