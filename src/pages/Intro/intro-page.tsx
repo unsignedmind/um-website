@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 export const IntroPage = () => {
   return (
     <>
-      <Link className="intro-page__skip" to='/my-work'>Skip</Link>
+      <Link className="intro-page__skip" to='/about-me'>Skip</Link>
       <div className='intro-page__full-size intro-page__bg-color' />
       <img src="images/intro-bg.jpg" alt="background" className='intro-page__full-size intro-page__bg-image' />
       <div className='portrait-info'>Please rotate device to portrait view</div>

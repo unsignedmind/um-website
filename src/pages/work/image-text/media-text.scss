@@ -4,6 +4,10 @@
 	&__wrapper {
 		display: flex;
 		align-items: center;
+
+		&:not(last-child) {
+			margin-bottom: rem-calc(50px)
+		}
 	}
 
 	&__media {
@@ -24,10 +28,10 @@
 	}
 
 	&__text-headline {
-		font-family: Bangers, serif;
-		font-size: rem-calc(40px);
+		font-family: Montserrat, serif;
+		font-size: rem-calc(32px);
 		margin-top: rem-calc(15px);
-		margin-bottom: rem-calc(5px);
+		margin-bottom: rem-calc(15px);
 		letter-spacing: rem-calc(2px);
 
 		@include themed() {
@@ -35,7 +39,7 @@
 		}
 
 		@include breakpoint($tablet) {
-			font-size: rem-calc(48px);
+			font-size: rem-calc(32px);
 		}
 
 		@include breakpoint($desktop){

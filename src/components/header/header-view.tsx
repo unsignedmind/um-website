@@ -18,8 +18,8 @@ export const HeaderView: React.FC = () => {
 						<div className='header__brand-explain-line'>Positive Forward Thinking</div>
 						<nav className='header__nav'>
 							<Link to='/' className='header__nav-item'>Start</Link>
-							<Link to='/my-work' className='header__nav-item'>My Work</Link>
 							<Link to='/about-me' className='header__nav-item'>About Me</Link>
+							<Link to='/my-work' className='header__nav-item'>My Work</Link>
 							<Link to='/contact' className='header__nav-item'>Contact</Link>
 						</nav>
 

@@ -3,20 +3,21 @@
 .text-gradient {
 	&__wrapper {
 		width: 100%;
-		margin-top: rem-calc(35px);
-		padding: rem-calc(20px 35px);
+		margin: rem-calc(35px 0 60px 0);
 		border-radius: rem-calc(5px);
 
 
 		@include themed {
 			color: t($text);
-			background: linear-gradient(180deg, t($about-text-gradient) 0%, rgba(255, 255, 255, 0) 100%);
 		}
 	}
 
 	&__headline {
 		padding-bottom: rem-calc(15px);
-		border-bottom: rem-calc(1px) solid #ccc;
+
+		@include themed {
+			border-bottom: rem-calc(1px) solid t($border);
+		}
 	}
 
 	&__headline-dollar {

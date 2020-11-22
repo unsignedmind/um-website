@@ -35,7 +35,7 @@ export const Skills = () => {
 						<div className="skills__tech-group-icons">
 							<img src="images/icons/tech/nodejs.png" alt="nodejs" />
 						</div>
-						<span>NodeJs</span>
+						<span>NodeJS</span>
 					</div>
 					<div className="skills__tech-group">
 						<div className="skills__tech-group-icons">

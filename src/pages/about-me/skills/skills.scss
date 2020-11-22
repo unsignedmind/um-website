@@ -4,7 +4,7 @@
 	&__gradient-box {
 		width: rem-calc(290px);
 		height: rem-calc(380px);
-		padding: rem-calc(30px 15px 20px 15px);
+		padding: rem-calc(15px);
 
 		@include themed {
 			color: t($text);
@@ -20,16 +20,14 @@
 			width: rem-calc(440px);
 			height: rem-calc(512px);
 		}
-
-		&--bordered {
-			@include themed {
-				box-shadow: rem-calc(0 0 10px 0) t($about-skill-gradient-border);
-			}
-		}
 	}
 
 	&__headline {
 		width: 100%;
+		margin-top: 0;
+		margin-bottom: rem-calc(30px);
+		font-size: rem-calc(32px);
+		font-weight: bold;
 		text-align: center;
 	}
 

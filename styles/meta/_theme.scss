@@ -80,27 +80,26 @@ $header-bg: 'header-bg';
 $text: 'text';
 $header-text: 'header-text';
 $border: 'border';
+$intro-border: 'intro-border';
 $header-border: 'header-border';
 $intro-animation: 'intro-animation';
 $darkMode-switch-bg: 'darkMode-switch-bg';
-$about-text-gradient: 'about-text-gradient';
 $about-skill-gradient: 'about-skill-gradient';
-$about-skill-gradient-border: 'about-skill-gradient-border';
-$about-card-gradient: 'about-card-gradient';
-$about-card-gradient-border: 'about-card-gradient-border';
 
 // Color Assignments
 $primary: $orange;
 $accent: $blue-dark;
 $bg-color-dark: #011225;
 
-
 $bg-light: $contrast-210;
 $bg-dark: $bg-color-dark;
 $text-light: $contrast-0;
 $text-dark: $contrast-210;
-$border-light: $contrast-0;
+$border-light: #ccc;
 $border-dark: $contrast-210;
+
+$intro-border-light: $contrast-0;
+$intro-border-dark: $contrast-210;
 
 $header-text-light: $contrast-210;
 $header-text-dark: $contrast-210;
@@ -115,23 +114,8 @@ $darkMode-switch-bg-dark: $bg-color-dark;
 $intro-animation-dark: bg-fade-dark;
 $intro-animation-light: bg-fade-light;
 
-$about-text-gradient-light: #F3F3F3;
-$about-text-gradient-light: #0D233A;
-
-$about-text-gradient-light: #F3F3F3;
-$about-text-gradient-dark: #0D233A;
-
-$about-skill-gradient-light: #FFC977;
+$about-skill-gradient-light: #E8E8E8;
 $about-skill-gradient-dark: #0D233A;
-
-$about-skill-gradient-border-light: #FFDEAC;
-$about-skill-gradient-border-dark: $blue-light;
-
-$about-card-gradient-light: #ECE9E9;
-$about-card-gradient-dark: #14385B;
-
-$about-card-gradient-border-light: #DDDDDD;
-$about-card-gradient-border-dark: #92ACC6;
 
 
 /* THEME */
@@ -146,11 +130,8 @@ $themes: (
     header-border: $header-border-light,
     intro-animation: $intro-animation-light,
     darkMode-switch-bg: $darkMode-switch-bg-light,
-    about-text-gradient: $about-text-gradient-light,
     about-skill-gradient: $about-skill-gradient-light,
-    about-skill-gradient-border: $about-skill-gradient-border-light,
-    about-card-gradient: $about-card-gradient-light,
-    about-card-gradient-border: $about-card-gradient-border-light,
+    intro-border: $intro-border-light,
   ),
   dark: (
     bg: $bg-dark,
@@ -161,10 +142,7 @@ $themes: (
     header-border: $header-border-dark,
     intro-animation: $intro-animation-dark,
     darkMode-switch-bg: $darkMode-switch-bg-dark,
-    about-text-gradient: $about-text-gradient-dark,
     about-skill-gradient: $about-skill-gradient-dark,
-    about-skill-gradient-border: $about-skill-gradient-border-dark,
-    about-card-gradient: $about-card-gradient-dark,
-    about-card-gradient-border: $about-card-gradient-border-dark,
+    intro-border: $intro-border-dark,
   ),
 );

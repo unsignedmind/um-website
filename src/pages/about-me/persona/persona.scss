@@ -4,13 +4,7 @@
 	&__card {
 		display: flex;
 		flex-direction: column;
-		padding: rem-calc(25px);
 		border-radius: rem-calc(5px);
-
-		@include themed {
-			border: rem-calc(1px) solid t($about-card-gradient-border);
-			background: linear-gradient(180deg, t(bg) 0%, t($about-card-gradient) 29.03%, t(bg) 53.12%);
-		}
 
 		@include breakpoint($tablet) {
 			flex-direction: row;
@@ -35,12 +29,16 @@
 		}
 
 		&--primary {
+			position: relative;
 			display: flex;
 			flex-direction: column;
 			font-size: rem-calc(42px);
 			margin-bottom: rem-calc(15px);
 			padding-bottom: rem-calc(15px);
-			border-bottom: rem-calc(1px) solid #ddd;
+
+			@include themed {
+				border-bottom: rem-calc(1px) solid t($border);
+			}
 
 			@include breakpoint(large) {
 				flex-direction: row;
@@ -49,6 +47,27 @@
 				span:first-child {
 					margin-right: rem-calc(20px);
 				}
+			}
+
+			&::after {
+				content: '&&';
+				position: absolute;
+				bottom: rem-calc(-11px);
+				left: calc(50% - #{rem-calc(20x)});
+				width: rem-calc(40px);
+				height: rem-calc(20px);
+				font-size: rem-calc(16);
+				font-weight: bold;
+
+				@include themed {
+					background-color: t($bg);
+					color: t($border);
+				}
+
+				@include breakpoint(large) {
+					left: calc(50% - #{rem-calc(30px)});
+				}
+
 			}
 		}
 

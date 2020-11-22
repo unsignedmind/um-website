@@ -12,8 +12,8 @@
 
     @include themed() {
       color: t($text);
-      border-left: rem-calc(1px) solid t($border);
-      border-right: rem-calc(1px) solid t($border)
+      border-left: rem-calc(1px) solid t($intro-border);
+      border-right: rem-calc(1px) solid t($intro-border)
     }
 
     @include breakpoint($tablet) {
@@ -44,11 +44,11 @@
     &:hover {
       cursor: pointer;
 
-      .menu__item-icon {
+      .intro-menu__item-icon {
         animation: menu-arrow-fade 1s ease-in-out infinite normal;
       }
 
-      .menu__item-name {
+      .intro-menu__item-name {
         text-decoration: underline;
         transition: 0.3s;
       }
@@ -84,6 +84,10 @@
     border-bottom: rem-calc(20px) solid transparent;
     border-left: rem-calc(34px) solid $orange;
     transition: 0.5s;
+
+    &:hover {
+      animation: menu-arrow-fade 1s ease-in-out infinite normal;
+    }
 
     @include breakpoint($tablet) {
       border-top: rem-calc(30px) solid transparent;

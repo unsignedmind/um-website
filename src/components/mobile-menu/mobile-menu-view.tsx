@@ -20,8 +20,8 @@ export const MobileMenuView: React.FC = () => {
 				<img src={"images/intro-bg.jpg"} alt="background" className='mobile-menu__bg-image' />
 				<nav className='mobile-menu__menu-list' role='navigation'>
 					<Link to='/'>Start</Link>
-					<Link to='/my-work'>My Work</Link>
 					<Link to='/about-me'>About Me</Link>
+					<Link to='/my-work'>My Work</Link>
 					<Link to='/contact'>Contact</Link>
 					<div className='mobile-menu__menu-list-dark-mode'>
 						<button className='mobile-menu__dark-mode-trigger-button' onClick={() => {UIStore.update(s => {s.darkMode = !s.darkMode})}}>
