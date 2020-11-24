@@ -76,7 +76,6 @@ $blue-light: #92ACC6;
 
 // Color string mapping
 $bg: 'bg';
-$header-bg: 'header-bg';
 $text: 'text';
 $header-text: 'header-text';
 $border: 'border';
@@ -105,8 +104,6 @@ $header-text-light: $contrast-210;
 $header-text-dark: $contrast-210;
 $header-border-light: $contrast-210;
 $header-border-dark: $contrast-210;
-$header-bg-light: $bg-color-dark;
-$header-bg-dark: $contrast-0;
 
 $darkMode-switch-bg-light: $contrast-210;
 $darkMode-switch-bg-dark: $bg-color-dark;
@@ -123,7 +120,6 @@ $about-skill-gradient-dark: #0D233A;
 $themes: (
   default: (
     bg: $bg-light,
-    header-bg: $header-bg-light,
     text: $text-light,
     header-text: $header-text-light,
     border: $border-light,
@@ -135,7 +131,6 @@ $themes: (
   ),
   dark: (
     bg: $bg-dark,
-    header-bg: $header-bg-dark,
     text: $text-dark,
     header-text: $header-text-dark,
     border: $border-dark,

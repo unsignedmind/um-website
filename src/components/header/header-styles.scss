@@ -12,7 +12,7 @@
 
   @include themed() {
     color: t($bg);
-    background-color: t($header-bg);
+    border-bottom: rem-calc(1px) solid t($border);
   }
 
   &__container {
@@ -47,7 +47,7 @@
       padding-right: rem-calc(25px);
 
       @include themed() {
-        border-right: 1px solid t($header-border);
+        border-right: 1px solid t(border);
       }
     }
 
@@ -66,7 +66,7 @@
     display: none;
 
     @include themed {
-      color: t($header-text);
+      color: t($text);
     }
 
     @include breakpoint(rem-calc(640px)) {
@@ -102,7 +102,7 @@
     }
 
     @include themed() {
-      color: t($header-text);
+      color: t($text);
     }
 
     &:hover {
@@ -114,8 +114,6 @@
   /* dark mode switch */
 
   &__dark-mode-switch-label {
-
-
     @include breakpoint(large) {
       white-space: nowrap;
     }
