@@ -32,8 +32,6 @@ $mobile-component-indentation: 25px;
 $tablet-desktop-component-indentation: 50px;
 
 /* Z-Index Contexts */
-$children-of-mobile-menu: burger, burger-trigger;
-$children-of-mobile-menu-wrapper: background, list;
-$children-of-page: slider-control-placeholder, mobile-menu, page-content-limit;
-$route-intro-page: bg-image, bg-color, container, skip, info;
-$route-about-page: slider-controls;
+$z-index: contact-card-bg-image, intro-bg-image, intro-bg-color, intro-container, intro-info, intro-skip,
+contact-card-content, about-me-skills-slider-controls, mobile-menu-background, mobile-menu-list,
+mobile-menu, page-content-limit, mobile-menu-burger, mobile-menu-burger-trigger;

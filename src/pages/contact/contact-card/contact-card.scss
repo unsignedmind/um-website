@@ -1,0 +1,126 @@
+@import '../../../../styles/meta/_index';
+
+.contact-card {
+	&__wrapper {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: rem-calc(1000px);
+		margin: 0 auto;
+		padding: rem-calc(50px 0px);
+		border-radius: rem-calc(10px);
+		overflow: hidden;
+		box-shadow: rem-calc(0px 4px 4px) rgba(0, 0, 0, 0.25);
+
+		@include themed {
+			background-color: t($bg);
+		}
+
+		@include breakpoint($tablet) {
+			padding: rem-calc(100px 50px);
+		}
+	}
+
+	&__img-wrapper {
+		z-index: z($z-index, contact-card-bg-image);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: rem-calc(800px);
+
+		@include breakpoint($tablet) {
+			width: rem-calc(1200px);
+		}
+	}
+
+	&__image {
+		width: rem-calc(400px);
+		height: rem-calc(400px);
+		opacity: 0.2;
+	}
+
+	&__container {
+		z-index: z($z-index, contact-card-content);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@include themed {
+			color: t($text);
+		}
+	}
+
+	&__headlines {
+		text-align: center;
+		line-height: 0.9;
+
+		&--1st {
+			font-size: rem-calc(35px);
+			//letter-spacing: rem-calc(2px);
+			font-weight: bold;
+		}
+
+		&--2nd {
+			font-size: rem-calc(32px);
+		}
+
+		&--3rd {
+			padding-top: rem-calc(5px);
+			font-size: rem-calc(18px);
+			line-height: 1;
+		}
+	}
+
+	&__socials-wrapper {
+		display: grid;
+		grid-template:
+			'box'
+			'box'
+			'box'
+			'box';
+		margin: rem-calc(-25px);
+		padding-top: rem-calc(50px);
+
+		@include breakpoint($tablet) {
+			grid-template:
+			'box box'
+			'box box';
+		}
+	}
+
+	&__social-box {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: rem-calc(250px);
+		height: rem-calc(95px);
+		padding: rem-calc(20px);
+		margin: rem-calc(25px);
+
+		@include themed {
+			background-color: t($bg);
+			border: rem-calc(1px) solid t($contact-border);
+		}
+	}
+
+	&__social-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: rem-calc(32px);
+		height: rem-calc(32px);
+		margin-right: rem-calc(25px);
+	}
+
+	&__social-text {
+		display: flex;
+		flex-direction: column;
+		font-size: rem-calc(18px);
+	}
+
+	&__social-name {
+		font-weight: bold;
+	}
+}

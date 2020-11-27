@@ -4,7 +4,7 @@ $intro-animation-start: calc(50% + #{rem-calc(160px)});
 
 .intro-page {
   &__skip {
-    z-index: z($route-intro-page, skip);
+    z-index: z($z-index, intro-skip);
     position: absolute;
     top: 0;
     width: 100%;
@@ -16,7 +16,7 @@ $intro-animation-start: calc(50% + #{rem-calc(160px)});
   }
 
   &__container {
-    z-index: z($route-intro-page, container);
+    z-index: z($z-index, intro-container);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -50,7 +50,7 @@ $intro-animation-start: calc(50% + #{rem-calc(160px)});
   }
 
   &__bg-color {
-    z-index: z($route-intro-page, bg-color);
+    z-index: z($z-index, intro-bg-color);
     opacity: 1;
 
     animation: intro-bg-color-fade 1s ease-in-out 4s forwards;
@@ -61,7 +61,7 @@ $intro-animation-start: calc(50% + #{rem-calc(160px)});
   }
 
   &__bg-image {
-    z-index: z($route-intro-page, bg-image);
+    z-index: z($z-index, intro-bg-image);
     opacity: 1;
     filter: blur(3px);
 
@@ -78,7 +78,7 @@ $intro-animation-start: calc(50% + #{rem-calc(160px)});
 }
 
 .portrait-info {
-  z-index: z($route-intro-page, info);
+  z-index: z($z-index, intro-info);
   position: absolute;
   display: none;
   justify-content: center;

@@ -109,6 +109,11 @@
       border-bottom: rem-calc(3px) solid $primary;
       text-decoration: none;
     }
+
+    &--active {
+      border-bottom: rem-calc(3px) solid $primary;
+      text-decoration: none;
+    }
   }
 
   /* dark mode switch */

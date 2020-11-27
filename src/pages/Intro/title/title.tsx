@@ -5,8 +5,8 @@ import { useWindowSize } from '../../../utils/useWindowSize';
 
 export const Title = () => {
 	const windowSize = useWindowSize()
-	const isMobile = windowSize.width < 768 || windowSize.height < 311;
-	const title: Array<string> = isMobile ? ['Unsigned', 'mind++;'] : ['Unsignedmind++;'];
+	const splitTitle = windowSize.width < 768 || windowSize.height < 311;
+	const title: Array<string> = splitTitle ? ['Unsigned', 'mind++;'] : ['Unsignedmind++;'];
 
 	return (
 		<div className='title__title-wrapper'>

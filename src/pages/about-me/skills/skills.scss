@@ -98,7 +98,7 @@
 }
 
 .splide__arrows, .splide__pagination {
-	z-index: z($route-about-page, slider-controls);
+	z-index: z($z-index, about-me-skills-slider-controls);
 
 	@include breakpoint($tablet) {
 		display: none !important;

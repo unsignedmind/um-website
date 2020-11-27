@@ -1,11 +1,14 @@
 import React from 'react';
-import './intro-page.scss'
+import './intro-page.scss';
 import { Title } from './title/title';
 import { IntroMenu } from './menu/intro-menu';
 import { IntroCopyright } from './intro-copyright/intro-copyright';
 import { Link } from 'react-router-dom';
+import { NavPages, UIStore } from '../../state/state';
 
 export const IntroPage = () => {
+  UIStore.update(s => { s.activePage = NavPages.INTRO })
+
   return (
     <>
       <Link className="intro-page__skip" to='/about-me'>Skip</Link>

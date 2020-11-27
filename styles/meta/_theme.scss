@@ -79,6 +79,7 @@ $bg: 'bg';
 $text: 'text';
 $header-text: 'header-text';
 $border: 'border';
+$contact-border: 'contact-border';
 $intro-border: 'intro-border';
 $header-border: 'header-border';
 $intro-animation: 'intro-animation';
@@ -99,6 +100,9 @@ $border-dark: $contrast-210;
 
 $intro-border-light: $contrast-0;
 $intro-border-dark: $contrast-210;
+
+$contact-border-light: $contrast-0;
+$contact-border-dark: $primary;
 
 $header-text-light: $contrast-210;
 $header-text-dark: $contrast-210;
@@ -128,6 +132,7 @@ $themes: (
     darkMode-switch-bg: $darkMode-switch-bg-light,
     about-skill-gradient: $about-skill-gradient-light,
     intro-border: $intro-border-light,
+    contact-border: $contact-border-light,
   ),
   dark: (
     bg: $bg-dark,
@@ -139,5 +144,6 @@ $themes: (
     darkMode-switch-bg: $darkMode-switch-bg-dark,
     about-skill-gradient: $about-skill-gradient-dark,
     intro-border: $intro-border-dark,
+    contact-border: $contact-border-dark,
   ),
 );

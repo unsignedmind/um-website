@@ -17,7 +17,7 @@ export const Skills = () => {
 	>
 		<SplideSlide>
 			<div className='skills__gradient-box'>
-				<h2 className='skills__headline'>In Shape</h2>
+				<h2 className='skills__headline'>Confident</h2>
 				<div className="skills__tech">
 					<div className="skills__tech-group">
 						<div className="skills__tech-group-icons">

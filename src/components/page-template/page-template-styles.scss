@@ -6,7 +6,7 @@
 	}
 
 	&__limit {
-		z-index: z($children-of-page, page-content-limit);
+		z-index: z($z-index, page-content-limit);
 		max-width: rem-calc(1440px);
 		margin: 0 auto;
 		overflow: visible;
@@ -14,9 +14,11 @@
 
 	&__indentation {
 		margin: 0 rem-calc(20px);
+		padding-top: rem-calc($mobile-component-indentation);
 
 		@include breakpoint($tablet) {
 			margin: 0 rem-calc(40px);
+			padding-top: rem-calc($tablet-desktop-component-indentation);
 		}
 
 		@include breakpoint($tablet) {

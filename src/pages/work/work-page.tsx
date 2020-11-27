@@ -3,8 +3,11 @@ import './work-page.scss';
 import { PageHeadline } from '../../widgets/page-headline/page-headline';
 import { MediaText } from './image-text/media-text';
 import { FooterView } from '../../components/footer/footer-view';
+import { NavPages, UIStore } from '../../state/state';
 
 export const WorkPage = () => {
+
+	UIStore.update(s => { s.activePage = NavPages.MY_WORK })
 
 	const articles = [
 		{

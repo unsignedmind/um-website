@@ -2,7 +2,7 @@
 
 .mobile-menu {
 	display: block;
-	z-index: z($children-of-page, mobile-menu);
+	z-index: z($z-index, mobile-menu);
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -33,7 +33,7 @@
 	}
 
 	&__menu-list {
-		z-index: z($children-of-mobile-menu-wrapper, list);
+		z-index: z($z-index, mobile-menu-list);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -43,7 +43,7 @@
 	}
 
 	&__bg-image {
-		z-index: z($children-of-mobile-menu-wrapper, background);
+		z-index: z($z-index, mobile-menu-background);
 		position: absolute;
 		height: 100%;
 		width: 100%;
@@ -92,7 +92,7 @@
 	}
 
 	&__burger {
-		z-index: z($children-of-mobile-menu, burger);
+		z-index: z($z-index, mobile-menu-burger);
 		position: absolute;
 		top: rem-calc(14px);
 		right: rem-calc(10px);
@@ -132,7 +132,7 @@
 	}
 
 	&__burger-trigger {
-		z-index: z($children-of-mobile-menu, burger-trigger);
+		z-index: z($z-index, mobile-menu-burger-trigger);
 		position: absolute;
 		top: rem-calc(14px);
 		right: rem-calc(10px);
