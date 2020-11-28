@@ -7,6 +7,7 @@ import { PageTemplateView } from './components/page-template/page-template-view'
 import Contact from './pages/contact/contact';
 import { About } from './pages/about-me/about';
 import { UIStore } from './state/state';
+import { Imprint } from './pages/imprint/imprint';
 
 
 function App() {
@@ -37,6 +38,9 @@ function App() {
       </Route>
       <Route path='/contact'>
         <PageTemplateView><Contact /></PageTemplateView>
+      </Route>
+      <Route path='/imprint'>
+        <PageTemplateView><Imprint /></PageTemplateView>
       </Route>
     </div>
   );

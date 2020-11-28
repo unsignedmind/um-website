@@ -16,22 +16,22 @@ export const ContactCard = () => {
 		{
 			iconUrl: 'images/icons/social/twitter.png',
 			name: 'Twitter',
-			link: '',
+			link: 'https://twitter.com/unsignedmind',
 		},
 		{
 			iconUrl: 'images/icons/social/xing.png',
 			name: 'XING',
-			link: '',
+			link: 'https://www.xing.com/profile/Niklas_Schmidt11/cv',
 		},
 		{
 			iconUrl: 'images/icons/social/github.png',
 			name: 'Github',
-			link: '',
+			link: 'https://github.com/unsignedmind',
 		},
 		{
 			iconUrl: 'images/icons/social/stackoverflow.png',
 			name: 'Stackoverflow',
-			link: '',
+			link: 'https://stackoverflow.com/users/4987660/unsignedmind',
 		},
 	];
 
@@ -70,7 +70,7 @@ export const ContactCard = () => {
 							</div>
 							<div className='contact-card__social-text'>
 								<span className='contact-card__social-name'>{social.name}</span>
-								<a className='contact-card__social-link'>To Profile</a>
+								<a href={social.link} target="_blank" className='contact-card__social-link'>To Profile</a>
 							</div>
 						</div>
 					)}
